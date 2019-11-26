@@ -1,3 +1,16 @@
 a {
   outline: none;
 }
+
+.img-hover-zoom {
+  height: 150px;
+  overflow: hidden;
+}
+
+.img-hover-zoom i {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover i {
+  transform: scale(1.1);
+}
