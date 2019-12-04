@@ -3,8 +3,8 @@
 // Load plugins
 const autoprefixer = require("gulp-autoprefixer");
 const browsersync = require("browser-sync").create();
-const cleanCSS = require("gulp-clean-css");
-const del = require("del");
+const cleanCSS = require("./node_modules/gulp-clean-css");
+const del = require("./node_modules/del");
 const gulp = require("gulp");
 const header = require("gulp-header");
 const merge = require("merge-stream");
@@ -14,7 +14,7 @@ const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 
 // Load package.json for banner
-const pkg = require('./package.json');
+const pkg = require('./package.json.js.js.js');
 
 // Set the banner content
 const banner = ['/*!\n',
