@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - Agency v5.2.2 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
+ * Start Bootstrap -  v5.2.2 (http://seanphilippi.github.io/website-boilerplate)
+ * Copyright 2013-2019 Sean Philippi
+ * Licensed under MIT (https://github.com/BlackrockDigital/qubtx.com/blob/master/LICENSE)
  */
 
 body {
@@ -147,12 +147,14 @@ img::-moz-selection {
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -172,7 +174,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../img/speed-tunnel.jpeg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -243,6 +245,7 @@ header.masthead .intro-text .intro-heading {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
   background: rgba(254, 209, 54, 0.9);
@@ -362,6 +365,7 @@ header.masthead .intro-text .intro-heading {
   height: 75px;
   margin-left: 35px;
   /* IE 9 */
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #212529;
 }
@@ -372,6 +376,7 @@ header.masthead .intro-text .intro-heading {
   width: 1px;
   height: 75px;
   /* IE 9 */
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   background-color: #212529;
 }
@@ -670,6 +675,7 @@ ul.social-buttons li a {
   display: block;
   width: 50px;
   height: 50px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: white;
   border-radius: 100%;

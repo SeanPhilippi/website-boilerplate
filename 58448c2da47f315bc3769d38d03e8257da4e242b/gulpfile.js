@@ -15,6 +15,7 @@ const uglify = require("gulp-uglify");
 
 // Load package.json for banner
 const pkg = require('./package.json');
+
 // Set the banner content
 const banner = ['/*!\n',
   ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
