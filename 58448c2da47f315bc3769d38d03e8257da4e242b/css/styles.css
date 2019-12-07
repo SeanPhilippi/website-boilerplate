@@ -50,7 +50,7 @@ h6 {
 }
 
 .page-section h3.section-subheading {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   font-style: italic;
   text-transform: none;
@@ -604,7 +604,7 @@ div.masthead .intro-text .intro-description {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-image: linear-gradient(to bottom, rgba(62, 72, 81, 0.5), rgba(62, 72, 81, 0.5)), url("../img/buildings.jpeg");
   background-repeat: no-repeat;
   background-position: center;
 }
