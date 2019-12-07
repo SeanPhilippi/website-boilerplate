@@ -1,8 +1,13 @@
-// Variables
+// original primary
+// $primary: #fed136 !default;
 
-// Restated Bootstrap Variables
+$light-cyan: #D5FFF3 !default;
+$japanese-indigo: #23395B !default;
+$electric-blue: #4CE8D7 !default;
+$gray-blue: #8B94A3 !default;
+$primary: $electric-blue !default;
 
-$white: #fff !default;
+$white: white !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -14,4 +19,5 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$primary: #fed136 !default;
+$text-primary: white;
+$text-secondary: $white;
