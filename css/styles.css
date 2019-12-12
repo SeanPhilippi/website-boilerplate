@@ -73,6 +73,12 @@ h6 {
   text-shadow: none;
 }
 
+img {
+  max-height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 img::-moz-selection {
   background: transparent;
 }
