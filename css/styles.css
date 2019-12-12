@@ -40,7 +40,7 @@ h6 {
 }
 
 .page-section {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .page-section h2.section-heading {
@@ -136,6 +136,10 @@ img::-moz-selection {
   border: 0;
   background-color: #4CE8D7;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#mainNav .navbar-toggler:focus {
+  outline: white auto 5px;
 }
 
 #mainNav .navbar-brand {
@@ -408,7 +412,7 @@ div.masthead .intro-text .intro-description {
   left: 40px;
   width: 2px;
   margin-left: -1.5px;
-  content: '';
+  content: "";
   background-color: #e9ecef;
 }
 
@@ -420,7 +424,7 @@ div.masthead .intro-text .intro-description {
 
 .timeline > li:after, .timeline > li:before {
   display: table;
-  content: ' ';
+  content: " ";
 }
 
 .timeline > li:after {

@@ -9,6 +9,9 @@
     color: $white;
     border: 0;
     background-color: $primary;
+    &:focus {
+      outline: white auto 5px;
+    }
     @include heading-font;
   }
   .navbar-brand {
