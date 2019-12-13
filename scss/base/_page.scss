@@ -70,6 +70,10 @@ img {
   object-fit: cover;
 }
 
+.img-vr {
+  object-position: center 38%;
+}
+
 img::selection {
   background: transparent;
 }

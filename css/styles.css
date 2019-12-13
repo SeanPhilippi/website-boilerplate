@@ -79,6 +79,11 @@ img {
   object-fit: cover;
 }
 
+.img-vr {
+  -o-object-position: center 38%;
+  object-position: center 38%;
+}
+
 img::-moz-selection {
   background: transparent;
 }
