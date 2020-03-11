@@ -1,3 +1,22 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="hadyn.inniss1@qubtx.com";
+    $subject="Form message from QUBTX.com";
+    $firstName=$_POST["firstName"];
+    $lastName=$_POST["lastName"];
+    $email=$_POST["email"];
+    $message=$_POST["message"];
+    $location=$_POST["location"];
+
+    $mailBody="Name: $firstName $lastName\nEmail: $email\n$location\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $firstName $lastName <$email>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -157,7 +176,7 @@
             </div> -->
           </h3>
           <p class="text-white">
-            Or give us a call at 555-555-5555
+            Or give us a call at 512-6585726
           </p>
           <p class="text-white">
             We will get back with you shortly!
@@ -167,34 +186,50 @@
 
       <div class="row pt-4">
         <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
+          <form method="post" action="contact.php" id="contactForm" name="sentMessage" novalidate="novalidate">
+
+              <div class="col-md-12 d-flex">
+                <div class="form-group col-md-6">
+                  <input class="form-control" name="firstName" id="firstName" type="text" placeholder="First Name *" required="required" data-validation-required-message="Please enter your first name.">
+                  <p style="margin: 0 !important;" class="help-block text-danger"></p>
                 </div>
-                <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
+                <div class="form-group col-md-6">
+                  <input class="form-control" name="lastName" id="lastName" type="text" placeholder="Last Name *" required="required" data-validation-required-message="Please enter your last name.">
+                  <p style="margin: 0 !important;" class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
+
+              <div class="col-md-12 d-flex">
+                <div class="form-group col-md-12">
+                  <input class="form-control" name="email" id="email" type="email" placeholder="Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <p style="margin: 0 !important;" class="help-block text-danger"></p>
                 </div>
               </div>
+
+              <div class="col-md-12 d-flex">
+                <div class="form-group col-md-6">
+                  <input class="form-control" name="location" id="location" type="text" placeholder="Where Are You? *" required="required" data-validation-required-message="Please enter your location.">
+                  <p style="margin: 0 !important;" class="help-block text-danger"></p>
+                </div>
+                <div class="form-group col-md-6">
+                  <input class="form-control" name="phone" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <p style="margin: 0 !important;" class="help-block text-danger"></p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group col-md-12">
+                  <textarea class="form-control" name="message" id="message" placeholder="Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p style="margin: 0 !important;" class="help-block text-danger"></p>
+                </div>
+              </div>
+
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
                 <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
               </div>
-            </div>
+
           </form>
         </div>
       </div>
@@ -263,7 +298,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                <img class="style="margin: 0 !important;" img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
