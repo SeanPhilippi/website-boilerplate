@@ -1,22 +1,3 @@
-<?php
-
-if($_POST["submit"]) {
-    $recipient="hadyn.inniss1@qubtx.com";
-    $subject="Form message from QUBTX.com";
-    $firstName=$_POST["firstName"];
-    $lastName=$_POST["lastName"];
-    $email=$_POST["email"];
-    $message=$_POST["message"];
-    $location=$_POST["location"];
-
-    $mailBody="Name: $firstName $lastName\nEmail: $email\n$location\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $firstName $lastName <$email>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -176,7 +157,7 @@ if($_POST["submit"]) {
             </div> -->
           </h3>
           <p class="text-white">
-            Or give us a call at 512-6585726
+            Or give us a call at <a href="tel:512j-658-5726">512-658-5726</a>
           </p>
           <p class="text-white">
             We will get back with you shortly!
