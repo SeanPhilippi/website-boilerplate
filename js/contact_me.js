@@ -41,7 +41,7 @@ $(function() {
         },
         error: function() {
           // Fail message
-          $('#success').html("<div class='alert alert-danger'>");
+          $('#success').html("<div class='alert alert-danger col-md-12'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that our mail server is not responding. Please try again later!"));
