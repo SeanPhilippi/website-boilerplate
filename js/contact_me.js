@@ -1,15 +1,8 @@
 $(function() {
-  // get values from FORM
-  const firstName = $("input#firstName").val();
-  const lastName = $("input#lastName").val();
-  const email = $("input#email").val();
-  const location = $("input#location").val();
-  const phone = $("input#phone").val();
-  const message = $("textarea#message").val();
-
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
+      const firstName = $("input#firstName").val();
       // additional error messages or events
       $('#success').html("<div class='alert alert-danger col-md-12'>");
       $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -17,7 +10,7 @@ $(function() {
       $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that our mail server is not responding. Please try again later!"));
       $('#success > .alert-danger').append('</div>');
       //clear all fields
-      $('#contactForm').trigger("reset");
+    //   $('#contactForm').trigger("reset");
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
@@ -29,13 +22,13 @@ $(function() {
         dataType: "json",
         crossDomain: true,
         type: "POST",
-        data: {
-          name: `${firstName} ${lastName}`,
-          phone: phone,
-          location: location,
-          email: email,
-          message: message
-        },
+        // data: {
+        //   name: `${firstName} ${lastName}`,
+        //   phone: phone,
+        //   location: location,
+        //   email: email,
+        //   message: message
+        // },
         cache: false,
         // success: function() {
         //   // Success message

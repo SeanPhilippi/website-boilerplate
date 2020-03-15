@@ -295,42 +295,36 @@
   </footer>
 
   <!-- contact form ajax -->
-  <!-- <script>
+  <script>
     window.addEventListener("DOMContentLoaded", function() {
 
       // get the form elements defined in your form HTML above
 
       const form = document.getElementById("contactForm");
       const button = document.getElementById("sentMessageButton");
-      const firstName = $("input#firstName").val();
-      const lastName = $("input#lastName").val();
-      const email = $("input#email").val();
-      const location = $("input#location").val();
-      const phone = $("input#phone").val();
-      const message = $("textarea#message").val();
 
       // Success and Error functions for after the form is submitted
 
       function success() {
-        $('#success').html("<div class='alert alert-success'>");
-        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-        .append("</button>");
-        $('#success > .alert-success')
-        .append("<strong>Your message has been sent. </strong>");
-        $('#success > .alert-success')
-        .append('</div>');
+        // $('#success').html("<div class='alert alert-success'>");
+        // $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        // .append("</button>");
+        // $('#success > .alert-success')
+        // .append("<strong>Your message has been sent. </strong>");
+        // $('#success > .alert-success')
+        // .append('</div>');
         //clear all fields
         $('#contactForm').trigger("reset");
       }
 
       function error() {
-        $('#success').html("<div class='alert alert-danger col-md-12'>");
-        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-        .append("</button>");
-        $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that our mail server is not responding. Please try again later!"));
-        $('#success > .alert-danger').append('</div>');
+        // $('#success').html("<div class='alert alert-danger col-md-12'>");
+        // $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        // .append("</button>");
+        // $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that our mail server is not responding. Please try again later!"));
+        // $('#success > .alert-danger').append('</div>');
         //clear all fields
-        $('#contactForm').trigger("reset");
+        // $('#contactForm').trigger("reset");
       }
 
       // handle the form submission event
@@ -338,27 +332,35 @@
       form.addEventListener("submit", function(e) {
         e.preventDefault();
         const data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
+        ajax(form.method, form.action, data);
       });
     });
 
     // helper function for sending an AJAX request
 
     function ajax(method, url, data, success, error) {
+      const firstName = $("input#firstName").val();
+      const lastName = $("input#lastName").val();
+      const email = $("input#email").val();
+      const location = $("input#location").val();
+      const phone = $("input#phone").val();
+      const message = $("textarea#message").val();
       const xhr = new XMLHttpRequest();
       xhr.open(method, url);
       xhr.setRequestHeader("Accept", "application/json");
       xhr.onreadystatechange = function() {
         if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200 && ) {
+        if (xhr.status === 200) {
           success(xhr.response, xhr.responseType);
         } else {
           error(xhr.status, xhr.response, xhr.responseType);
         }
       };
-      xhr.send(data);
+      if (firstName && lastName && email && location && phone && message) {
+          xhr.send(data);
+      }
     }
-  </script> -->
+  </script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
